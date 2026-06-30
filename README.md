@@ -25,7 +25,7 @@ This RISC V 5 Stage pipeline Implementation does encounters hazards, and it has 
 
 5 Stage pipeline requires a series of registers between the complete datapath, these registers will be responsible for tracking of instruction or different partss of instructions required by different modules. The instructions needs to be propogated into all five stages for the instruction to be executed correctly and with the help of these registers the corresponding instructions propogate or different parts of instructions accordingly. The datapath followed is mentioned below and is the extened version of same implemented single cycle datapath as tagged above. 
 
-![block diagram](https://github.com/user-attachments/assets/42f3b097-bc33-449c-b613-3b0cdca62cc9)
+![Block Diagram](images/Pipelined_Processor.png)
 
 # Discussions
 
@@ -73,19 +73,17 @@ In a 32-bit RISC-V 5-stage pipeline, **hazard detection and forwarding units** a
 The Data Hazard is solved using Forwarding/ Bypassing
 
 **Conditiion Table:**
-![Screenshot 2024-09-06 203221](https://github.com/user-attachments/assets/df426216-b65d-4fca-a8b4-4416f27851c8)
+![Block Diagram](images/Forwarding_Table.png)
 
 **Condition for Data Hazard:**
 
-![Screenshot 2024-09-06 203244](https://github.com/user-attachments/assets/1350b3e3-edb7-40ee-bf39-dd62a56339e2)
+![Block Diagram](images/ForwardingLogic.png)
 
 **Hazard Architecture:**
 
-![Screenshot 2024-09-06 203309](https://github.com/user-attachments/assets/4ff4a805-0982-40df-81b8-b5d112d0e71e)
+![Block Diagram](images/Hazard_Unit.png)
 
 **Hazard Unit Waveform Explanation**
-
-![hazard exp](https://github.com/user-attachments/assets/65d8acc2-d5a8-4342-bfd3-aba943781752)
 
 **Note: The circled registers represents hazard unit**
 
@@ -94,18 +92,6 @@ The Data Hazard is solved using Forwarding/ Bypassing
 The simulation has been in **Visual Studio** code with **Icarus Verilog environment**, which supports **gtkwave** for verilog simulaiton.
 
 **The Input Machine Learning Codes are present inside the mem.hexfile.**
-
-**Pipeline Simulation Waveform:**
-
-![pipeline waveform](https://github.com/user-attachments/assets/a2ff6866-87fa-4aa0-b489-59c82bb6be5b)
-
-**Note:** Download **Icarus Verilog** from:https://bleyer.org/icarus, after downloading in **CMD** type **iverilog**, you can see iverilog with gtkwave preinstalled.
-
-**Terminal code:**
-
-Eg: PS C:\Users\user\Desktop\Github projects\RISC_V_Single_Cycle_Core\Load Word I Type> **iverilog -o out.vvp .\pipeline_tb.v .\Pipeline_Top.v,**
-**vvp out.vvp,**
-**gtkwave.**
 
 
 
