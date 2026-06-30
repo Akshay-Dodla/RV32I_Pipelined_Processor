@@ -25,7 +25,7 @@ This RISC V 5 Stage pipeline Implementation does encounters hazards, and it has 
 
 5 Stage pipeline requires a series of registers between the complete datapath, these registers will be responsible for tracking of instruction or different partss of instructions required by different modules. The instructions needs to be propogated into all five stages for the instruction to be executed correctly and with the help of these registers the corresponding instructions propogate or different parts of instructions accordingly. The datapath followed is mentioned below and is the extened version of same implemented single cycle datapath as tagged above. 
 
-![Block Diagram](images/Pipelined_Processor.png)
+![Block Diagram](doc/block diagram.png)
 
 # Discussions
 
@@ -73,15 +73,15 @@ In a 32-bit RISC-V 5-stage pipeline, **hazard detection and forwarding units** a
 The Data Hazard is solved using Forwarding/ Bypassing
 
 **Conditiion Table:**
-![Block Diagram](images/Forwarding_Table.png)
+![Block Diagram](doc/condition table.png)
 
 **Condition for Data Hazard:**
 
-![Block Diagram](images/ForwardingLogic.png)
+![Block Diagram](doc/condition for data hazard.png)
 
 **Hazard Architecture:**
 
-![Block Diagram](images/Hazard_Unit.png)
+![Block Diagram](doc/hazard architecture.png)
 
 **Hazard Unit Waveform Explanation**
 
